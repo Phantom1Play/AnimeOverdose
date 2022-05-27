@@ -1,11 +1,13 @@
 
 // GET JSON FILE
 
-function getFileSity(fileName){
-  let  request = new XMLHttpRequest();
-  request.open('GET', fileName, false);
-  request.send(null);
-  return  JSON.parse(request.responseText);
+function getFileSity(fileName) {
+  const xhr = new XMLHttpRequest();
+
+  xhr.open('GET', fileName, false);
+  xhr.send();
+  
+  return JSON.parse(xhr.responseText);
 }
 
 // JSON ANIME LIST
