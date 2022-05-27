@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="mainHeader">
+        <div class="menu">
+            <h1><a href="../index.html">Anime-overdose</a></h1>
+            <h2><a href="anime.html">Аниме</a></h2>
+            <h2><a href="#" onclick="randomAnime()">Случайное аниме</a></h2>
+        </div>
+    </header>
+    
+    <main>
+        <header class="popularAnime">
+            <h2>Популярные аниме</h2>
+            <div class="container">
+                <div class="item" id="item_1">
+                    <a href="#"><img src="/media/images/1.jpg" alt=""></a>
+                    <p>Семья шпиона</p>
+                </div>
+                <div class="item" id="item_2">
+                    <a href="#"><img src="/media/images/2.jpg" alt=""></a>
+                    <p>Госпожа Кагуя: в любви как на войне 3</p>
+                </div>
+                <div class="item" id="item_3">
+                    <a href="#"><img src="/media/images/3.jpg" alt=""></a>
+                    <p>Власть книжного червя 3</p>
+                </div>
+                <div class="item" id="item_4">
+                    <a href="#"><img src="/media/images/4.jpg" alt=""></a>
+                    <p>Рандеву</p>
+                </div>
+                <div class="item" id="item_5">
+                    <a href="#"><img src="/media/images/5.jpg" alt=""></a>
+                    <p>Семья шпиона</p>
+                </div>
+                <div class="item" id="item_6">
+                    <a href="#"><img src="/media/images/6.jpg" alt=""></a>
+                    <p>Семья шпиона</p>
+                </div>
+                <div class="item" id="item_7">
+                    <a href="#"><img src="/media/images/7.jpg" alt=""></a>
+                    <p>Семья шпиона</p>
+                </div>
+                <div class="item" id="item_8">
+                    <a href="#"><img src="/media/images/8.jpg" alt=""></a>
+                    <p>Семья шпиона</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="news">
+
+            <h2>Новинки</h2>
+
+        <div class="newsContainer">
+            <div class="inner_container">
+                <div class="item" id="item_9">
+                    <a href="#"><img src="/media/images/1.jpg" alt=""></a>
+                    <p>Семья шпиона</p>
+                </div>
+                <div class="item" id="item_10">
+                    <a href="#"><img src="/media/images/2.jpg" alt=""></a>
+                    <p>Госпожа Кагуя: в любви как на войне 3</p>
+                </div>
+                <div class="item" id="item_11">
+                    <a href="#"><img src="/media/images/3.jpg" alt=""></a>
+                    <p>Власть книжного червя 3</p>
+                </div>
+                <div class="item" id="item_12">
+                    <a href="#"><img src="/media/images/4.jpg" alt=""></a>
+                    <p>Рандеву</p>
+                </div>
+                <div class="item" id="item_13">
+                    <a href="#"><img src="/media/images/5.jpg" alt=""></a>
+                    <p>Семья шпиона</p>
+                </div>
+                <div class="item" id="item_14">
+                    <a href="#"><img src="/media/images/6.jpg" alt=""></a>
+                    <p>Семья шпиона</p>
+                </div>
+                <div class="item" id="item_15">
+                    <a href="#"><img src="/media/images/7.jpg" alt=""></a>
+                    <p>Семья шпиона</p>
+                </div> 
+            </div>    
+            <div class="inner_container">
+                <div class="item" id="item_16">
+                    <a href="#"><img src="/media/images/1.jpg" alt=""></a>
+                    <p>Семья шпиона</p>
+                </div>
+                <div class="item" id="item_17">
+                    <a href="#"><img src="/media/images/2.jpg" alt=""></a>
+                    <p>Госпожа Кагуя: в любви как на войне 3</p>
+                </div>
+                <div class="item" id="item_18">
+                    <a href="#"><img src="/media/images/3.jpg" alt=""></a>
+                    <p>Власть книжного червя 3</p>
+                </div>
+                <div class="item" id="item_19">
+                    <a href="#"><img src="/media/images/4.jpg" alt=""></a>
+                    <p>Рандеву</p>
+                </div>
+                <div class="item" id="item_20">
+                    <a href="#"><img src="/media/images/5.jpg" alt=""></a>
+                    <p>Семья шпиона</p>
+                </div>
+                <div class="item" id="item_21">
+                    <a href="#"><img src="/media/images/6.jpg" alt=""></a>
+                    <p>Семья шпиона</p>
+                </div>
+                <div class="item" id="item_22">
+                    <a href="#"><img src="/media/images/7.jpg" alt=""></a>
+                    <p>Семья шпиона</p>
+                </div> 
+            </div> 
+        </div>  
+        <div class="but">
+
+            <a href="anime.html">Весь список аниме</a>
+        
+        </div>
+        </div>
+    </main>
+
+    <script>
+    
+    function getFileSity(fileName){
+        let  request = new XMLHttpRequest();
+        request.open('GET', fileName, false);
+        request.send(null);
+        return  JSON.parse(request.responseText);
+    }
+    
+    let animeCount = getFileSity('./info/data/anime_quantity.json');
+    
+    console.log(animeCount[0]["ID"]);
+    
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+    
+    let random_number = getRandomInt(1, animeCount[0]["ID"]);
+    
+    function randomAnime() {
+        window.location.href = '/titles/' + random_number + '.html';
+    }
+    
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>

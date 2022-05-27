@@ -1,0 +1,83 @@
+body {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.mainHeader {
+    background-color: #302C2C;
+    height: 6vh;
+    color: #EB3135;
+    font-size: 1.5em;
+    display: flex;
+    
+}
+
+.mainHeader h1 a {
+    font-size: 1em;
+}
+
+.mainHeader a {
+    font-size: .75em;
+    color: #EB3135;
+    transition: all 0.1s ease;
+    text-decoration: none;
+}
+
+.mainHeader a:hover {
+    color: #fff;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 25vw;
+    margin-left: 10%;
+    align-items: center;
+}
+
+body {
+    background-color: rgba(19, 22, 88, .09);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+.title_container {
+    background-color: #fff;
+    width: 90vw;
+    margin-top: 2.5vw;
+    padding: 50px;
+    margin-bottom: 2.5vw;
+}
+
+.title_container h2 {
+    font-size: 1.5em;
+    margin-bottom: 50px;
+}
+
+.list {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+.cover {
+    width: 250px;
+
+}
+.cover_row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.cover img {
+    width: 100%;
+}
+
+.cover h2 {
+    font-size: 1.25em;
+    text-align: center;
+    padding: 25px 0;
+    font-weight: bold;
+}
+

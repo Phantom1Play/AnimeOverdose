@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/title.css">
+</head>
+<body>
+
+    <header class="mainHeader">
+        <div class="menu">
+            <h1><a href="../index.html">Anime-overdose</a></h1>
+            <h2><a href="../anime.html">Аниме</a></h2>
+            <h2><a href="#" onclick="randomAnime()">Случайное аниме</a></h2>
+        </div>
+    </header>
+    
+    <main>
+
+        <div class="title_container">
+
+            <header>
+                <div class="cover">
+                    <img src="../media/images/1_0.jpg" alt="" id="anime_cover">
+                    <input type="button" value="Смотреть аниме" onclick="watchAnime()" id="anime_watch">
+                </div>
+                <div class="information">
+                    <h2 id="anime_title">Семья шпиона
+                    </h2>
+                    <table>
+                        <tr>
+                            <td>
+                                <span>Тип</span>
+                            </td>
+                            <td>
+                                <span id="anime_type">Аниме</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>Статус</span>
+                            </td>
+                            <td>
+                                <span id="anime_status">Онгоинг</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>Жанры</span>
+                            </td>
+                            <td>
+                                <span id="anime_genres">Комедия, Сёнэн, Экшен</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>Источник</span>
+                            </td>
+                            <td>
+                                <span id="anime_source">Манга</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>Студия</span>
+                            </td>
+                            <td>
+                                <span id="anime_studio">CloverWorks, Wit Studio</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>Возрастные ограничения</span>
+                            </td>
+                            <td>
+                                <span id="anime_restrictions">16+</span>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <h3>Описание</h3>
+                    <p class="description" id="anime_description">
+                        Над миром нависла страшная угроза! Шпиону «Сумраку» предстоит выполнить сложнейшую миссию в своей карьере… стать примерным семьянином. Под видом любящего мужа и отца он должен проникнуть в элитную школу и сблизиться с верхами мира политики. На первый взгляд прикрытие вышло великолепное, во только его жена — наёмная убийца. И супруги не знают о настоящей работе друг друга… В курсе только их приёмная дочь-телепат!
+                    </p>
+
+                </div>
+                
+                
+              
+            </header>
+            
+            <div class="screenshots">
+                <h2>Кадры из аниме</h2>
+
+                <div class="screenshots_container">
+                    <img src="../media/images/1_1.jpg" alt="" id="anime_screenshots_1">
+                    <img src="../media/images/1_2.jpg" alt="" id="anime_screenshots_2">
+                    <img src="../media/images/1_3.jpg" alt="" id="anime_screenshots_3">
+                </div>
+            </div>
+        
+        </div>
+    </main>
+
+    <script>
+    
+    function getFileSity(fileName){
+        let  request = new XMLHttpRequest();
+        request.open('GET', fileName, false);
+        request.send(null);
+        return  JSON.parse(request.responseText);
+    }
+    
+    let animeCount = getFileSity('../info/data/anime_quantity.json');
+    
+    console.log(animeCount[0]["ID"]);
+    
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+    
+    let random_number = getRandomInt(1, animeCount[0]["ID"]);
+    
+    function randomAnime() {
+        window.location.href = '/titles/' + random_number + '.html';
+    }
+    
+    </script>
+    <script src="../anime.js"></script>
+</body>
+</html>

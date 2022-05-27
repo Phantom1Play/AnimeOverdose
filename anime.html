@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/anime.css">
+</head>
+<body>
+
+    <header class="mainHeader">
+        <div class="menu">
+            <h1><a href="../index.html">Anime-overdose</a></h1>
+            <h2><a href="#">Аниме</a></h2>
+            <h2><a href="#" onclick="randomAnime()">Случайное аниме</a></h2>
+        </div>
+    </header>
+    
+    <main>
+
+        <div class="title_container">
+            <h2>Все аниме</h2>
+            <header class="list" id="list">
+                
+            </header>
+            
+        
+        </div>
+    </main>
+    <script>
+    
+        function getFileSity(fileName){
+            let  request = new XMLHttpRequest();
+            request.open('GET', fileName, false);
+            request.send(null);
+            return  JSON.parse(request.responseText);
+        }
+        
+        let animeCount = getFileSity('./info/data/anime_quantity.json');
+        
+        console.log(animeCount[0]["ID"]);
+        
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+        
+        let random_number = getRandomInt(1, animeCount[0]["ID"]);
+        
+        function randomAnime() {
+            window.location.href = '/titles/' + random_number + '.html';
+        }
+        
+        </script>
+    <script src="/anime_list.js"></script>
+</body>
+</html>
