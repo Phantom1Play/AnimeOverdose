@@ -12,11 +12,11 @@ function getFileSity(fileName) {
   
 // JSON ANIME LIST
   
-let sityData = getFileSity('http://animeoverdose/info/data/anime.json');
+let sityData = getFileSity('https://phantom1play.github.io/AnimeOverdose/info/data/anime.json');
   
 // JSON ANIME QUANTITY
   
-let animeQuantity = getFileSity('http://animeoverdose/info/data/anime_quantity.json');
+let animeQuantity = getFileSity('https://phantom1play.github.io/AnimeOverdose/info/data/anime_quantity.json');
 let animeQ = animeQuantity[0]["ID"];
 
 console.log(sityData);
