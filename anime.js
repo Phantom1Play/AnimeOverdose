@@ -10,7 +10,7 @@ function getFileSity(fileName) {
   return JSON.parse(xhr.responseText);
 }
 
-let title_name_temp = document.location.pathname.split("/")[2];
+let title_name_temp = document.location.pathname.split("/")[3];
 let anime_id = title_name_temp.split(".")[0]-1;
 let anime_id_img = anime_id + 1;
 
