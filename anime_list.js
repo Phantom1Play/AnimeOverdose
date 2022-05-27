@@ -27,7 +27,7 @@ console.log("Rows " + Math.ceil(animeQ/6));
   list_row.className = "cover_row";
   const list_item = document.createElement("div");
   list_item.className = "cover";
-  list_item.innerHTML = '<a href="#"><img src="../media/images/1_0.jpg" alt="" id="anime_cover"></a><h2 id="anime_title">Семья шпиона</h2>';
+  list_item.innerHTML = '<a href="#"><img src="./media/images/1_0.jpg" alt="" id="anime_cover"></a><h2 id="anime_title">Семья шпиона</h2>';
   list_row.innerHTML = "hi";
   let list_row_quantity = 0;
 
