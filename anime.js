@@ -1,25 +1,23 @@
 
 // GET JSON FILE
 
-function getFileSity(fileName) {
-  const xhr = new XMLHttpRequest();
+function getFileSity(fileName){
+    let  request = new XMLHttpRequest();
+    request.open('GET', fileName, false);
+    request.send(null);
+    return  JSON.parse(request.responseText);
+  }
 
-  xhr.open('GET', fileName, false);
-  xhr.send();
-  
-  return JSON.parse(xhr.responseText);
-}
-
-let title_name_temp = document.location.pathname.split("/")[3];
+let title_name_temp = document.location.pathname.split("/")[2];
 let anime_id = title_name_temp.split(".")[0]-1;
 let anime_id_img = anime_id + 1;
 
 console.log(anime_id);
   
   // JSON ANIME LIST
-  let sityData = getFileSity('https://phantom1play.github.io/AnimeOverdose/info/data/anime.json');
+  let sityData = getFileSity('http://animeoverdose/info/data/anime.json');
   // JSON ANIME QUANTITY
-  let animeQuantity = getFileSity('https://phantom1play.github.io/AnimeOverdose/info/data/anime_quantity.json');
+  let animeQuantity = getFileSity('http://animeoverdose/info/data/anime_quantity.json');
   
   console.log(sityData);
   console.log(animeQuantity[0]["ID"]);

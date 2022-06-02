@@ -58,13 +58,13 @@ conn.query(anime_query, (err, result) => {
     })
 });
 
-let generators_list = "SELECT * FROM generator_list"
+// let generators_list = "SELECT * FROM generator_list"
 
-conn.query(generators_list, (err, result) => {
-    fs.writeFileSync('./info/data/generator_list.json', JSON.stringify(result), function (err) {
-        if (err) throw err;
-    })
-});
+// conn.query(generators_list, (err, result) => {
+//     fs.writeFileSync('./info/data/generator_list.json', JSON.stringify(result), function (err) {
+//         if (err) throw err;
+//     })
+// });
 
 const content = fs.readFileSync('./titles/type.txt');
 

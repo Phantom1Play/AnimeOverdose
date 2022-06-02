@@ -5,13 +5,20 @@ body {
 
 .mainHeader {
     background-color: #302C2C;
-    height: 6vh;
+    height: 6%;
+    min-height: 6vh;
+    padding: 15px 0;
     color: #EB3135;
     font-size: 1.5em;
     display: flex;
     
 }
-
+.mainHeader h1 {
+    padding-right: 25px;
+}
+.mainHeader h2 {
+    padding-right: 25px;
+}
 .mainHeader h1 a {
     font-size: 1em;
 }
@@ -30,7 +37,6 @@ body {
 .menu {
     display: flex;
     justify-content: space-between;
-    width: 25vw;
     margin-left: 10%;
     align-items: center;
 }
@@ -135,4 +141,53 @@ input[type=button]:hover {
     cursor: pointer;
     font-size: 1.25em;
     border: none;
+}
+
+@media (max-width: 1000px) {
+    .mainHeader {
+        justify-content: center;
+    }
+    .menu {
+        margin-left: 0;
+    }
+    .big_container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .popularAnime h2 {
+        margin: 0;
+    }
+    .popularAnime {
+        text-align: center;
+    }
+    .newsBigContainer {
+        flex-direction: column;
+    }
+    .inner_container {
+        margin-bottom: 25px;
+    }
+    .news {
+        text-align: center;
+    }
+    .news h2 {
+        margin: 0;
+    }
+    
+    .anime_info {
+        display: flex;
+        flex-direction: column;
+    }
+    .information { 
+        padding: 25px 0 15px 0;
+    }
+    .cover img {
+        width: 100%;
+    }
+    .screenshots_container {
+        flex-direction: column;
+    }
+    .screenshots img {
+        width: 100%;
+        padding: 15px 0;
+    }
 }

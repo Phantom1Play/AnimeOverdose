@@ -22,7 +22,7 @@
 
         <div class="title_container">
 
-            <header>
+            <header class="anime_info">
                 <div class="cover">
                     <img src="../media/images/1_0.jpg" alt="" id="anime_cover">
                     <input type="button" value="Смотреть аниме" onclick="watchAnime()" id="anime_watch">
@@ -127,7 +127,7 @@
     let random_number = getRandomInt(1, animeCount[0]["ID"]);
     
     function randomAnime() {
-        window.location.href = './titles/' + random_number + '.html';
+        window.location.href = '/titles/' + random_number + '.html';
     }
     
     </script>

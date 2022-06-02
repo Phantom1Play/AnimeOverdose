@@ -2,27 +2,34 @@ body {
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
 }
-
 .mainHeader {
     background-color: #302C2C;
-    height: 6vh;
+    height: 6%;
+    min-height: 6vh;
+    padding: 15px 0;
     color: #EB3135;
     font-size: 1.5em;
     display: flex;
     
 }
-
+.mainHeader h1 {
+    padding-right: 25px;
+}
+.mainHeader h2 {
+    padding-right: 25px;
+}
 .mainHeader h1 a {
     font-size: 1em;
 }
-
+.mainHeader h1 a {
+    font-size: 1em;
+}
 .mainHeader a {
     font-size: .75em;
     color: #EB3135;
     transition: all 0.1s ease;
     text-decoration: none;
 }
-
 .mainHeader a:hover {
     color: #fff;
 }
@@ -30,7 +37,7 @@ body {
 .menu {
     display: flex;
     justify-content: space-between;
-    width: 25vw;
+
     margin-left: 10%;
     align-items: center;
 }
@@ -71,7 +78,7 @@ main {
     justify-content: space-between;
 }
 .cover img {
-    width: 100%;
+    width: 250px;
 }
 
 .cover h2 {
@@ -81,3 +88,33 @@ main {
     font-weight: bold;
 }
 
+@media (max-width: 1000px) {
+    .mainHeader {
+        justify-content: center;
+    }
+    .menu {
+        margin-left: 0;
+    }
+    .big_container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .popularAnime h2 {
+        margin: 0;
+    }
+    .popularAnime {
+        text-align: center;
+    }
+    .newsBigContainer {
+        flex-direction: column;
+    }
+    .inner_container {
+        margin-bottom: 25px;
+    }
+    .news {
+        text-align: center;
+    }
+    .news h2 {
+        margin: 0;
+    }
+}
