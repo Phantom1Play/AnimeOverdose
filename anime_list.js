@@ -55,7 +55,7 @@ console.log("Rows " + Math.ceil(animeQ/6));
           x++
           const list_item = document.createElement("div");
           list_item.className = "cover";
-          list_item.innerHTML = '<a href="' + "./titles/" + x + '.html"><img src="../media/images/' + x + '_0.jpg" alt="" id="anime_cover"></a><h2 id="anime_title">' + sityData[x-1]["Title"] + '</h2>';
+          list_item.innerHTML = '<a href="' + "./titles/" + x + '.html"><img src="./media/images/' + x + '_0.jpg" alt="" id="anime_cover"></a><h2 id="anime_title">' + sityData[x-1]["Title"] + '</h2>';
           list_row.appendChild(list_item);
           console.log(x);
         }
