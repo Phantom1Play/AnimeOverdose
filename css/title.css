@@ -13,11 +13,14 @@ body {
     display: flex;
     
 }
-.mainHeader h1 {
+/* .mainHeader h1 {
     padding-right: 25px;
 }
 .mainHeader h2 {
     padding-right: 25px;
+} */
+.menu a {
+    padding: 0 25px;
 }
 .mainHeader h1 a {
     font-size: 1em;
@@ -144,6 +147,13 @@ input[type=button]:hover {
 }
 
 @media (max-width: 1000px) {
+    .menu h1 {
+        display: none;
+    }
+    
+    body {
+        font-size: 16px;
+    }
     .mainHeader {
         justify-content: center;
     }
@@ -189,5 +199,8 @@ input[type=button]:hover {
     .screenshots img {
         width: 100%;
         padding: 15px 0;
+    }
+    .information td:first-child {
+        min-width: auto;
     }
 }
